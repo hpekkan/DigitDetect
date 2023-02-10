@@ -1,15 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Glass from './components/Glass'
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        
-        
-      </header>
-    </div>
-  );
+return (
+<div className="app">
+<Glass/>
+</div>
+);
 }
-
 export default App;

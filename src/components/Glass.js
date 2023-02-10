@@ -14,7 +14,7 @@ function Glass() {
     const params = { gender, bsc, workex, etest_p, msc }
 
     axios
-      .post('http://localhost:8080/prediction', params)
+      .post('http://localhost:8000/prediction', params)
       .then((res) => {
         const data = res.data.data
         const parameters = JSON.stringify(params)
