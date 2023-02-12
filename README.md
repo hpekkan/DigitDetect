@@ -10,7 +10,7 @@
 
 <div align="center">
 
-![an example gif](https://github.com/hpekkan/webappML/blob/main/demo/demo.gif)</br></br>
+![an example gif](https://github.com/hpekkan/DigitDetect/blob/main/demo/demo.gif)</br></br>
 </div>
 ## <p align="center">Getting Started</p> 
 
