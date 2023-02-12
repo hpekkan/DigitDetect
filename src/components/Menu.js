@@ -4,7 +4,7 @@ import "../App.css";
 import axios from "axios";
 const resizeImageData = require('resize-image-data')
 
-const Menu = ({  setLineWidth, Clear, MainCanvas }) => {
+const Menu = ({  setLineWidth, Clear, MainCanvas, MainCtxT }) => {
   const [guess, setGuess] = useState(null);
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
@@ -15,7 +15,7 @@ const Menu = ({  setLineWidth, Clear, MainCanvas }) => {
     ctx.lineJoin = "round";
     ctx.lineWidth = 5;
     ctx.opacity = 1;
-    ctx.font = "24px Arial";
+    ctx.font = "40px Arial";
     ctxRef.current = ctx;
     ctx.beginPath();
   }, []);
@@ -25,13 +25,16 @@ const Menu = ({  setLineWidth, Clear, MainCanvas }) => {
       draw(guess);
     }
   }, [guess]);
-
+  const clearClick = () => {
+    Clear();
+    ctxRef.current.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+  }
   const draw = (e) => {
     ctxRef.current.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
     if(e>9){
-      ctxRef.current.fillText(e, 0, 21);
+      ctxRef.current.fillText(e, 0, 34);
     }else {
-      ctxRef.current.fillText(e, 8, 21);
+      ctxRef.current.fillText(e, 8, 34);
     }
   };
   const handleGuess = async (grayscaleArray) => {
@@ -64,19 +67,9 @@ const Menu = ({  setLineWidth, Clear, MainCanvas }) => {
   return (
     <div className="Menu">
       
-      <label>Brush Width </label>
-      <input
-        type="range"
-        min="3"
-        max="20"
-        defaultValue ="20"
-        onChange={(e) => {
-          setLineWidth(e.target.value);
-        }}
-      />
       <button
         type='button'
-        onClick={() => { Clear();}}
+        onClick={() => { clearClick();}}
       >
         Clear
       </button>
@@ -89,8 +82,8 @@ const Menu = ({  setLineWidth, Clear, MainCanvas }) => {
       <div className="draw-area">
         <canvas
           ref={canvasRef}
-          width={`28px`}
-          height={`28px`}
+          width={`40px`}
+          height={`40px`}
         />
       </div>
       

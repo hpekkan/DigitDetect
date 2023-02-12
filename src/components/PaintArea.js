@@ -6,7 +6,6 @@ function PaintArea() {
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
-  const [lineWidth, setLineWidth] = useState(20);
 
   // Initialization when the component
   // mounts for the first time
@@ -15,9 +14,9 @@ function PaintArea() {
     const ctx = canvas.getContext("2d");
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
-    ctx.lineWidth = lineWidth;
+    ctx.lineWidth = 20;
     ctxRef.current = ctx;
-  }, [ lineWidth]);
+  }, []);
   
   // Function for starting the drawing
   const startDrawing = (e) => {
@@ -51,12 +50,13 @@ function PaintArea() {
   
   return (
     <div className="PaintArea">
-      <h1>Draw Area</h1>
+      <h1>Draw Hub</h1>
       <Menu
-          setLineWidth={setLineWidth}
           Clear={Clear}
           MainCanvas = {canvasRef}
+          MainCtxT = {ctxRef}
         />
+      <p>Use the Entire Canvas for Optimal Predictions with DigitDetect</p>
       <div className="draw-area">
         <canvas
           onMouseDown={startDrawing}
