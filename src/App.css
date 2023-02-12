@@ -1,39 +1,138 @@
 @import url(
 'https://fonts.googleapis.com/css2?family=Lobster&display=swap');
   
-.App {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background-image: linear-gradient(
-    120deg, #fdfbfb 0%, #ebedee 100%);
-}
+
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+  .App {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: linear-gradient(
+      120deg, #fdfbfb 0%, #ebedee 100%);
+  }
+    
+  h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    color: #4644f0;
+  }
+    
+  .draw-area {
+    width: 512px;
+    height: 512px;
+    border: 2px solid #808080;
+    position: relative;
+    background-color: white;
+    margin: 20px;
+  }
+    
+  .Menu {
+    width: 20em;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #a3a3a32d;
+    margin: auto;
+    margin-top: 10px;
+  }
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
   
-h1 {
-  font-family: 'Lobster', cursive;
-  font-size: 50px;
-  color: #4644f0;
-}
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {}
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {}
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+  .App {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: linear-gradient(
+      120deg, #fdfbfb 0%, #ebedee 100%);
+  }
+    
+  h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    color: #4644f0;
+  }
+    
+  .draw-area {
+    width: 512px;
+    height: 512px;
+    border: 2px solid #808080;
+    position: relative;
+    background-color: white;
+    margin: 20px;
+  }
+    
+  .Menu {
+    width: 500px;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #a3a3a32d;
+    margin: auto;
+  }
+  button {
+    margin: 10px 0;
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
+    font-size: 100%;
+    height: 42px;
+    line-height: 1.15;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s, box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 20%;
+  }
   
-.draw-area {
-  width: 1280px;
-  height: 720px;
-  border: 2px solid #808080;
-  position: relative;
-  background-color: white;
-}
+  button:disabled {
+    cursor: default;
+  }
   
-.Menu {
-  width: 650px;
-  height: 50px;
-  display: flex;
-  justify-content: space-evenly;
-  border-radius: 5px;
-  align-items: center;
-  background-color: #a3a3a32d;
-  margin: auto;
-  margin-top: 10px;
-}
+  button:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+  }
+  
+  button:hover {
+    background-color: #E01E79;
+    border: 2px solid white;
+    font-weight: 500;
+  }
+ } 
