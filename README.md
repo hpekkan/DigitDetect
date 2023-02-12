@@ -42,9 +42,6 @@
 
 ### <p align="center">Built With</p>
 
-
-#### <p align="center">Encryption</p>
-
 - React - The front-end library used
 - Python - The backend language used
 - Axios - Promise based HTTP client for the browser and node.js
@@ -52,4 +49,5 @@
 
 
 # <p align="center" >Author</p></br> 
+
 ## <p align="center" >Huseyin PEKKAN</p></br> 
