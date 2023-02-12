@@ -12,6 +12,7 @@
 
 ![an example gif](https://github.com/hpekkan/DigitDetect/blob/main/demo/demo.gif)</br></br>
 </div>
+
 ## <p align="center">Getting Started</p> 
 
 #### <p align="center">These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.</p>
