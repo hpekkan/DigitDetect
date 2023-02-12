@@ -1,8 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import React from "react";
 import "../App.css";
+import { conditionalExpression } from "@babel/types";
+const resizeImageData = require('resize-image-data')
+
+const Menu = ({  setLineWidth, Clear, MainCanvas }) => {
   
-const Menu = ({  setLineWidth, Clear }) => {
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
   useEffect(() => {
@@ -23,6 +26,20 @@ const Menu = ({  setLineWidth, Clear }) => {
     }else {
       ctxRef.current.fillText(e, 8, 21);
     }
+  };
+  const getImage = () => {
+    const canvas = MainCanvas.current;
+    const ctx = canvas.getContext('2d');
+    const imageData = ctx.getImageData(0,0,canvas.width, canvas.height);
+    
+    const resizedImage = resizeImageData(imageData, 28, 28, 'bilinear-interpolation')
+    var grayScale = [];
+    for(var i=0; i<resizedImage.data.length; i+=4){
+      grayScale.push(resizedImage.data[i+3]);
+    }
+    console.log(JSON.stringify(grayScale));
+
+
   };
   return (
     <div className="Menu">
@@ -45,7 +62,7 @@ const Menu = ({  setLineWidth, Clear }) => {
       </button>
       <button
         type='button'
-        onClick={() => { draw(10);}}
+        onClick={() => {getImage() }}
       >
         Guess
       </button>

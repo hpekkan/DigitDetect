@@ -55,6 +55,7 @@ function PaintArea() {
       <Menu
           setLineWidth={setLineWidth}
           Clear={Clear}
+          MainCanvas = {canvasRef}
         />
       <div className="draw-area">
         <canvas
