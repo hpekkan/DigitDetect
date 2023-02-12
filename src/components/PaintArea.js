@@ -28,7 +28,7 @@ function PaintArea() {
     );
     setIsDrawing(true);
   };
-  const clear = (e) => {
+  const Clear = (e) => {
     ctxRef.current.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
   }
   // Function for ending the drawing
@@ -50,11 +50,11 @@ function PaintArea() {
   };
   
   return (
-    <div className="App">
-      <h1>Paint App</h1>
+    <div className="PaintArea">
+      <h1>Draw Area</h1>
       <Menu
           setLineWidth={setLineWidth}
-          clear={clear}
+          Clear={Clear}
         />
       <div className="draw-area">
         <canvas
