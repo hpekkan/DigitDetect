@@ -15,7 +15,7 @@ function InfoArea() {
           are then sent back to the frontend for display. Overall, this web application demonstrates the power of integrating various modern
            web technologies to create a functional and efficient digit recognition system.</p>
            <p className="second-p">
-           To use the DigitDetect, simply paint a digit in the right canvas panel and hit the "Guess" button. The recognition
+           To use the DigitDetect, simply paint a digit in the "Draw Hub" and hit the "Guess" button. The recognition
             result will be displayed right next to the button. Give it a try and see how accurate the model is!
            </p>
     </div>

@@ -1,76 +1,77 @@
 @import url(
 'https://fonts.googleapis.com/css2?family=Lobster&display=swap');
   
-
-
+.draw-area {
+  width: 512px;
+  height: 512px;
+  border: 2px solid #808080;
+  position: relative;
+  background-color: white;
+  margin:  0px 20px 20px 20px;
+}
+.draw-area-452{
+  width: 452px;
+  height: 452px;
+  border: 2px solid #808080;
+  position: relative;
+  background-color: white;
+  margin:  0px 20px 20px 20px;
+}
+.draw-area-400{
+  width: 400px;
+  height: 400px;
+  border: 2px solid #808080;
+  position: relative;
+  background-color: white;
+  margin:  0px 20px 20px 20px;
+}
+.draw-area-352{
+  width: 352px;
+  height: 352px;
+  border: 2px solid #808080;
+  position: relative;
+  background-color: white;
+  margin:  0px 20px 20px 20px;
+}
+.draw-area-300{
+  width: 300px;
+  height: 300px;
+  border: 2px solid #808080;
+  position: relative;
+  background-color: white;
+  margin:  0px 20px 20px 20px;
+}
+.draw-area-256{
+  width: 256px;
+  height: 256px;
+  border: 2px solid #808080;
+  position: relative;
+  background-color: white;
+  margin:  0px 20px 20px 20px;
+}
+.draw-area-128{
+  width: 128px;
+  height: 128px;
+  border: 2px solid #808080;
+  position: relative;
+  background-color: white;
+  margin:  0px 20px 20px 20px;
+}
  /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {
+ @media only screen and (max-width: 200px) {
   .App {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-image: linear-gradient(
-      120deg, #fdfbfb 0%, #ebedee 100%);
-  }
-    
-  h1 {
-    font-family: 'Lobster', cursive;
-    font-size: 40px;
-    color: #4644f0;
-  }
-    
-  .draw-area {
-    width: 512px;
-    height: 512px;
-    border: 2px solid #808080;
-    position: relative;
-    background-color: white;
-    margin: 20px;
-  }
-    
-  .Menu {
-    width: 20em;
-    height: 50px;
-    display: flex;
-    justify-content: space-evenly;
-    border-radius: 5px;
-    align-items: center;
-    background-color: #a3a3a32d;
-    margin: auto;
-    margin-top: 10px;
-  }
- }
-
- /* Small devices (portrait tablets and large phones, 600px and up) */
- @media only screen and (min-width: 600px) {
-  
- }
- 
- /* Medium devices (landscape tablets, 768px and up) */
- @media only screen and (min-width: 768px) {}
- 
- /* Large devices (laptops/desktops, 992px and up) */
- @media only screen and (min-width: 992px) {}
- 
- /* Extra large devices (large laptops and desktops, 1200px and up) */
- @media only screen and (min-width: 1200px) {
-
-  .App {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
     vertical-align: center;
     background-image: linear-gradient(
       120deg, #fdfbfb 0%, #ebedee 100%);
-  }
+    overflow-x: hidden;
+    }
   .PaintArea{
-    width: 60%;
+    width: 100%;
     height: 100vh;
     vertical-align: center;
     display: flex;
@@ -84,13 +85,16 @@
     text-align: center;
     color: #222;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 400;
     line-height: 24px;
 
   }
+  .InfoArea h1{
+    margin: 20.1px 0 0 0;
+  }
   .InfoArea{
-    width: 40%;
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: flex-start;
@@ -98,35 +102,33 @@
     flex-direction: column;
   }
   .InfoArea p{
-    margin: 10px;
-    height: 100vh;
+    margin: 20px;
     vertical-align: center;
     text-align: center;
     color: #222;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 400;
-    line-height: 24px;
-    margin: 0 0 14px; 
+    line-height: 18px;
   }
   .InfoArea span{
     color: #0074D9;
     font-weight: bold;
   }
   .first-p{
-    padding: 3em 3em 1em 3em;
+    padding: 3em 2em 1em 3em;
   }
   .second-p{
     padding: 0em 3em 1em 3em;
   }
   h1 {
     font-family: 'Lobster', cursive;
-    font-size: 40px;
+    font-size: 30px;
     color: #4644f0;
   }
   .PaintArea h1 {
-    font-size: 30px;
-
+    font-size: 24px;
+    margin: 0 0 1.5em 0;
   }
     
   .draw-area {
@@ -181,7 +183,716 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 20%;
+    width: 90px;
+  }
+  
+  button:disabled {
+    cursor: default;
+  }
+  
+  button:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+  }
+  
+  button:hover {
+    background-color: #E01E79;
+    border: 2px solid white;
+    font-weight: 500;
+  }
+ }
+ 
+ @media only screen and (min-width: 230px) {
+  .App {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: center;
+    background-image: linear-gradient(
+      120deg, #fdfbfb 0%, #ebedee 100%);
+    overflow-x: hidden;
+    }
+  .PaintArea{
+    width: 100%;
+    height: 100vh;
+    vertical-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .PaintArea p{
+    margin: 8px;
+    text-align: center;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+    line-height: 24px;
+
+  }
+  .InfoArea h1{
+    margin: 1em 0 0 0;
+  }
+  .InfoArea{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  .InfoArea p{
+    margin: 20px;
+    vertical-align: center;
+    text-align: center;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .InfoArea span{
+    color: #0074D9;
+    font-weight: bold;
+  }
+  .first-p{
+    padding: 1em 2em 1em 3em;
+  }
+  .second-p{
+    padding: 0em 3em 1em 3em;
+  }
+  h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    color: #4644f0;
+  }
+  .PaintArea h1 {
+    font-size: 24px;
+    margin: 0 0 1.5em 0;
+  }
+    
+  .draw-area {
+    width: 512px;
+    height: 512px;
+    border: 2px solid #808080;
+    position: relative;
+    background-color: white;
+    margin:  0px 20px 20px 20px;
+  }
+    
+  .Menu {
+    width: 60%;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #a3a3a32d;
+  }
+  .Menu .draw-area {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #808080;
+    position: relative;
+    background-color: white;
+    margin: 5px;
+  }
+  button {
+    margin: 10px 0;
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
+    font-size: 90%;
+    height: 42px;
+    line-height: 1.15;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s, box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 90px;
+  }
+  
+  button:disabled {
+    cursor: default;
+  }
+  
+  button:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+  }
+  
+  button:hover {
+    background-color: #E01E79;
+    border: 2px solid white;
+    font-weight: 500;
+  }
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 615px) {
+  .App {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: center;
+    background-image: linear-gradient(
+      120deg, #fdfbfb 0%, #ebedee 100%);
+    overflow-x: hidden;
+    }
+  .PaintArea{
+    width: 100%;
+    height: 100vh;
+    vertical-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .PaintArea p{
+    margin: 8px;
+    text-align: center;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 24px;
+
+  }
+  .InfoArea h1{
+    margin: 20.1px 0 0 0;
+  }
+  .InfoArea{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  .InfoArea p{
+    margin: 20px;
+    vertical-align: center;
+    text-align: center;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.15em;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .InfoArea span{
+    color: #0074D9;
+    font-weight: bold;
+  }
+  .first-p{
+    padding: 3em 2em 1em 3em;
+  }
+  .second-p{
+    padding: 0em 3em 1em 3em;
+  }
+  h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    color: #4644f0;
+  }
+  .PaintArea h1 {
+    font-size: 24px;
+    margin: 0 0 1.5em 0;
+  }
+    
+  .draw-area {
+    width: 512px;
+    height: 512px;
+    border: 2px solid #808080;
+    position: relative;
+    background-color: white;
+    margin:  0px 20px 20px 20px;
+  }
+    
+  .Menu {
+    width: 60%;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #a3a3a32d;
+  }
+  .Menu .draw-area {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #808080;
+    position: relative;
+    background-color: white;
+    margin: 5px;
+  }
+  button {
+    margin: 10px 0;
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
+    font-size: 100%;
+    height: 42px;
+    line-height: 1.15;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s, box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 90px;
+  }
+  
+  button:disabled {
+    cursor: default;
+  }
+  
+  button:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+  }
+  
+  button:hover {
+    background-color: #E01E79;
+    border: 2px solid white;
+    font-weight: 500;
+  }
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 900px) {
+  .App {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: center;
+    background-image: linear-gradient(
+      120deg, #fdfbfb 0%, #ebedee 100%);
+    overflow-x: hidden;
+    }
+  .PaintArea{
+    width: 100%;
+    height: 100vh;
+    vertical-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .PaintArea p{
+    margin: 8px;
+    text-align: center;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 24px;
+
+  }
+  .InfoArea h1{
+    margin: 20.1px 0 0 0;
+  }
+  .InfoArea{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  .InfoArea p{
+    margin: 20px;
+    vertical-align: center;
+    text-align: center;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.15em;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .InfoArea span{
+    color: #0074D9;
+    font-weight: bold;
+  }
+  .first-p{
+    padding: 3em 2em 1em 3em;
+  }
+  .second-p{
+    padding: 0em 3em 1em 3em;
+  }
+  h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    color: #4644f0;
+  }
+  .PaintArea h1 {
+    font-size: 24px;
+    margin: 0 0 1.5em 0;
+  }
+    
+  .draw-area {
+    width: 512px;
+    height: 512px;
+    border: 2px solid #808080;
+    position: relative;
+    background-color: white;
+    margin:  0px 20px 20px 20px;
+  }
+    
+  .Menu {
+    width: 60%;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #a3a3a32d;
+  }
+  .Menu .draw-area {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #808080;
+    position: relative;
+    background-color: white;
+    margin: 5px;
+  }
+  button {
+    margin: 10px 0;
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
+    font-size: 100%;
+    height: 42px;
+    line-height: 1.15;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s, box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 90px;
+  }
+  
+  button:disabled {
+    cursor: default;
+  }
+  
+  button:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+  }
+  
+  button:hover {
+    background-color: #E01E79;
+    border: 2px solid white;
+    font-weight: 500;
+  }
+ }
+ 
+ @media only screen and (min-width: 1140px) {
+
+  .App {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    background-image: linear-gradient(
+      120deg, #fdfbfb 0%, #ebedee 100%);
+    overflow-x: hidden;
+    }
+  .PaintArea{
+    width: 60%;
+    height: 100vh;
+    vertical-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .PaintArea p{
+    margin: 8px;
+    text-align: center;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 24px;
+
+  }
+  .InfoArea h1{
+    margin: 20.1px 0 0 0;
+  }
+  .InfoArea{
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  .InfoArea p{
+    margin: 10px;
+    height: 100vh;
+    vertical-align: center;
+    text-align: center;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 14px; 
+  }
+  .InfoArea span{
+    color: #0074D9;
+    font-weight: bold;
+  }
+  .first-p{
+    padding: 3em 3em 0em 3em;
+  }
+  .second-p{
+    padding: 0em 3em 1em 3em;
+  }
+  h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    color: #4644f0;
+  }
+  .PaintArea h1 {
+    font-size: 0px;
+  }
+    
+  
+    
+  .Menu {
+    width: 60%;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #a3a3a32d;
+  }
+  .Menu .draw-area {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #808080;
+    position: relative;
+    background-color: white;
+    margin: 5px;
+  }
+  button {
+    margin: 10px 0;
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
+    font-size: 100%;
+    height: 42px;
+    line-height: 1.15;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s, box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 90px;
+  }
+  
+  button:disabled {
+    cursor: default;
+  }
+  
+  button:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+  }
+  
+  button:hover {
+    background-color: #E01E79;
+    border: 2px solid white;
+    font-weight: 500;
+  }
+ } 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1310px) {
+
+  .App {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    background-image: linear-gradient(
+      120deg, #fdfbfb 0%, #ebedee 100%);
+    overflow-x: hidden;
+    }
+  .PaintArea{
+    width: 60%;
+    height: 100vh;
+    vertical-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .PaintArea p{
+    margin: 8px;
+    text-align: center;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 24px;
+
+  }
+  .InfoArea h1{
+    margin: 20.1px 0 0 0;
+  }
+  .InfoArea{
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  .InfoArea p{
+    margin: 10px;
+    height: 100vh;
+    vertical-align: center;
+    text-align: center;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 14px; 
+  }
+  .InfoArea span{
+    color: #0074D9;
+    font-weight: bold;
+  }
+  .first-p{
+    padding: 3em 3em 0em 3em;
+  }
+  .second-p{
+    padding: 0em 3em 1em 3em;
+  }
+  h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    color: #4644f0;
+  }
+  .PaintArea h1 {
+    font-size: 0px;
+  }
+    
+  
+    
+  .Menu {
+    width: 60%;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #a3a3a32d;
+  }
+  .Menu .draw-area {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #808080;
+    position: relative;
+    background-color: white;
+    margin: 5px;
+  }
+  button {
+    margin: 10px 0;
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
+    font-size: 100%;
+    height: 42px;
+    line-height: 1.15;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s, box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 90px;
   }
   
   button:disabled {

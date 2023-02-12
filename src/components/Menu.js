@@ -30,7 +30,6 @@ const Menu = ({  setLineWidth, Clear, MainCanvas, MainCtxT }) => {
     ctxRef.current.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
   }
   const draw = (e) => {
-    ctxRef.current.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
     if(e>9){
       ctxRef.current.fillText(e, 0, 34);
     }else {
@@ -61,7 +60,8 @@ const Menu = ({  setLineWidth, Clear, MainCanvas, MainCtxT }) => {
       grayScale.push(resizedImage.data[i+3]);
     }
     const prediction = await handleGuess(grayScale);
-    console.log(prediction);
+    ctxRef.current.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+    draw(prediction);
     setGuess(prediction);
   };
   return (
