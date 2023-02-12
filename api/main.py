@@ -1,6 +1,7 @@
 # Importing necessary libraries
 import uvicorn
 import pickle
+import numpy as np
 from pydantic import BaseModel
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -28,12 +29,8 @@ app.add_middleware(
 model = pickle.load(open('../model/model/digit_recog.pkl', 'rb'))
 
 # Defining the model input types
-class Candidate(BaseModel):
-    gender: int
-    bsc: float
-    workex: int
-    etest_p: float
-    msc: float
+class Image(BaseModel):
+    image: list
 
 # Setting up the home route
 @app.get("/")
@@ -42,21 +39,19 @@ def read_root():
 
 # Setting up the prediction route
 @app.post("/prediction/")
-async def get_predict(data: Candidate):
-    sample = [[
-        data.gender,
-        data.bsc,
-        data.workex,
-        data.etest_p,
-        data.msc
-    ]]
-
-    hired = model.predict(sample).tolist()[0]
-
+async def get_predict(data: Image):
+    sample = np.array(data.image)
+    sample= sample.reshape(-1,28,28,1)
+    sample = sample.astype('float32')/255
+    pred = model.predict(sample)
+    digit = np.argmax(pred, axis=1)
+    print(digit)
+    #hired = model.predict(sample).tolist()[0]
     return {
         "data": {
-            'prediction': hired,
-            'interpretation': 'Candidate can be hired.' if hired == 1 else 'Candidate can not be hired.'
+            'prediction': str(digit[0]),
+            
+            #'interpretation': 'Candidate can be hired.' if hired == 1 else 'Candidate can not be hired.'
         }
     }
 

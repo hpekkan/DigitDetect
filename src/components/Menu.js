@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import React from "react";
 import "../App.css";
-import { conditionalExpression } from "@babel/types";
+import axios from "axios";
 const resizeImageData = require('resize-image-data')
 
 const Menu = ({  setLineWidth, Clear, MainCanvas }) => {
-  
+  const [guess, setGuess] = useState(null);
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
   useEffect(() => {
@@ -19,6 +19,13 @@ const Menu = ({  setLineWidth, Clear, MainCanvas }) => {
     ctxRef.current = ctx;
     ctx.beginPath();
   }, []);
+
+  useEffect(() => {
+    if (guess !== null) {
+      draw(guess);
+    }
+  }, [guess]);
+
   const draw = (e) => {
     ctxRef.current.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
     if(e>9){
@@ -27,19 +34,32 @@ const Menu = ({  setLineWidth, Clear, MainCanvas }) => {
       ctxRef.current.fillText(e, 8, 21);
     }
   };
-  const getImage = () => {
+  const handleGuess = async (grayscaleArray) => {
+    var ans = -1;
+    await axios.post('http://127.0.0.1:8000/prediction/', {
+      image: grayscaleArray
+    })
+    .then(function (response) {
+      ans = parseInt(response.data.data.prediction);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    return ans;
+  };
+  const getImage = async () => {
     const canvas = MainCanvas.current;
     const ctx = canvas.getContext('2d');
     const imageData = ctx.getImageData(0,0,canvas.width, canvas.height);
     
     const resizedImage = resizeImageData(imageData, 28, 28, 'bilinear-interpolation')
-    var grayScale = [];
+    const grayScale = [];
     for(var i=0; i<resizedImage.data.length; i+=4){
       grayScale.push(resizedImage.data[i+3]);
     }
-    console.log(JSON.stringify(grayScale));
-
-
+    const prediction = await handleGuess(grayScale);
+    console.log(prediction);
+    setGuess(prediction);
   };
   return (
     <div className="Menu">
@@ -49,7 +69,7 @@ const Menu = ({  setLineWidth, Clear, MainCanvas }) => {
         type="range"
         min="3"
         max="20"
-        defaultValue ="5"
+        defaultValue ="20"
         onChange={(e) => {
           setLineWidth(e.target.value);
         }}

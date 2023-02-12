@@ -6,7 +6,7 @@ function PaintArea() {
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
-  const [lineWidth, setLineWidth] = useState(5);
+  const [lineWidth, setLineWidth] = useState(20);
 
   // Initialization when the component
   // mounts for the first time
