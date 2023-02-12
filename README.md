@@ -6,6 +6,12 @@
 
 #### <p align="center">This project is an AI-powered app that leverages cutting-edge technologies to deliver innovative solutions. As an AI enthusiast, this project is of great importance to you as it showcases the potential of AI in solving real-world problems and improving our daily lives. The project demonstrates your understanding of AI concepts and your ability to apply them in practical applications, making it a valuable addition to your portfolio. Whether you're looking to dive deeper into AI or just want to explore new and exciting opportunities, this project is sure to inspire and challenge you. Additionally, the app is also designed to be fully responsive, providing a seamless user experience across all devices.</p> 
 
+## <p align="center">Demo</p> 
+
+<div align="center">
+
+![an example gif](https://github.com/hpekkan/webappML/blob/main/demo/demo.gif)</br></br>
+</div>
 ## <p align="center">Getting Started</p> 
 
 #### <p align="center">These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.</p>
