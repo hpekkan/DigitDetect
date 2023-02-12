@@ -10,7 +10,12 @@
 
 <div align="center">
 
-![an example gif](https://github.com/hpekkan/DigitDetect/blob/main/demo/demo.gif)</br></br>
+![demo gif](https://github.com/hpekkan/DigitDetect/blob/main/demo/demo.gif)</br></br>
+
+![image](https://user-images.githubusercontent.com/75019129/218338788-536ba2b6-80c5-4d9c-afa6-01a814d75457.png)
+
+
+
 </div>
 
 ## <p align="center">Getting Started</p> 
