@@ -1,4 +1,4 @@
-### <p align="center">webappML</p> </br>
+### <p align="center">DigitDetect</p> </br>
 
 
 
