@@ -42,7 +42,9 @@ const Menu = ({  setLineWidth, Clear, MainCanvas, MainCtxT }) => {
       image: grayscaleArray
     })
     .then(function (response) {
-      ans = parseInt(response.data.data.prediction);
+      console.log(response);
+      ans = parseInt(response.data.data.prediction); 
+      
     })
     .catch(function (error) {
       console.log(error);

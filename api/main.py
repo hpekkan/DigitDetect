@@ -45,7 +45,6 @@ async def get_predict(data: Image):
     sample = sample.astype('float32')/255
     pred = model.predict(sample)
     digit = np.argmax(pred, axis=1)
-    #print(digit)
     return {
         "data": {
             'prediction': str(digit[0]),
