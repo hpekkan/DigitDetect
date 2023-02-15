@@ -61,7 +61,7 @@
  @media only screen and (max-width: 200px) {
   .App {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,7 +72,7 @@
     }
   .PaintArea{
     width: 100%;
-    height: 100vh;
+    height: auto;
     vertical-align: center;
     display: flex;
     justify-content: flex-start;
@@ -95,7 +95,7 @@
   }
   .InfoArea{
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -204,7 +204,7 @@
  @media only screen and (min-width: 230px) {
   .App {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -215,7 +215,7 @@
     }
   .PaintArea{
     width: 100%;
-    height: 100vh;
+    height: auto;
     vertical-align: center;
     display: flex;
     justify-content: flex-start;
@@ -238,7 +238,7 @@
   }
   .InfoArea{
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -348,7 +348,7 @@
  @media only screen and (min-width: 615px) {
   .App {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -359,7 +359,7 @@
     }
   .PaintArea{
     width: 100%;
-    height: 100vh;
+    height: auto;
     vertical-align: center;
     display: flex;
     justify-content: flex-start;
@@ -382,7 +382,7 @@
   }
   .InfoArea{
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -492,7 +492,7 @@
  @media only screen and (min-width: 900px) {
   .App {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -503,7 +503,7 @@
     }
   .PaintArea{
     width: 100%;
-    height: 100vh;
+    height: auto;
     vertical-align: center;
     display: flex;
     justify-content: flex-start;
@@ -526,7 +526,7 @@
   }
   .InfoArea{
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -636,7 +636,7 @@
 
   .App {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -648,7 +648,7 @@
     }
   .PaintArea{
     width: 60%;
-    height: 100vh;
+    height: auto;
     vertical-align: center;
     display: flex;
     justify-content: flex-start;
@@ -671,15 +671,16 @@
   }
   .InfoArea{
     width: 40%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
   }
   .InfoArea p{
     margin: 10px;
-    height: 100vh;
+    height: auto;
     vertical-align: center;
     text-align: center;
     color: #222;
@@ -709,7 +710,9 @@
     font-size: 30px;
   }
     
-  
+  .github{
+    cursor: pointer;
+  }
     
   .Menu {
     width: 60%;
@@ -776,7 +779,7 @@
 
   .App {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -788,7 +791,7 @@
     }
   .PaintArea{
     width: 60%;
-    height: 100vh;
+    height: auto;
     vertical-align: center;
     display: flex;
     justify-content: flex-start;
@@ -811,7 +814,7 @@
   }
   .InfoArea{
     width: 40%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -819,7 +822,7 @@
   }
   .InfoArea p{
     margin: 10px;
-    height: 100vh;
+    height: auto;
     vertical-align: center;
     text-align: center;
     color: #222;
