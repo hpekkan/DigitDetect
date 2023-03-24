@@ -41,6 +41,7 @@
   3. Install the dependencies ```pip install -r requirements.txt``` and  ```yarn install or npm install```
   4. Navigate to the "/api" directory ```cd api```
   - Start backend server ```uvicorn main:app --reload```
+  - In case you encounter an error while loading the model, you may need to navigate to the model directory and execute the command ```python model_factory.py```
   5. Start the development server ```yarn start or npm start```
   6. Open your browser to ```http://localhost:3000/``` to view the app.
 </p>
