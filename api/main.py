@@ -29,6 +29,7 @@ app.add_middleware(
 # Loading up the trained model
 model = pickle.load(open('../model/model/digit_recog.pkl', 'rb'))
 
+
 # Defining the model input types
 class Image(BaseModel):
     image: list
