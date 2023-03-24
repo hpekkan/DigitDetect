@@ -38,7 +38,7 @@
 #### <p align="center">
   1. Clone the repository       ```git clone https://github.com/hpekkan/webappML.git```
   2. Navigate to the directory ```cd webappML```
-  3. Install the dependencies ```pip install -r requirments.txt``` and  ```yarn install or npm install```
+  3. Install the dependencies ```pip install -r requirements.txt``` and  ```yarn install or npm install```
   4. Navigate to the "/api" directory ```cd api```
   - Start backend server ```uvicorn main:app --reload```
   5. Start the development server ```yarn start or npm start```
